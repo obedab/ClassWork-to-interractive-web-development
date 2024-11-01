@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div id="content">
+    <div>
+      <header><h1>Interractive Web-development</h1></header>
+    </div>
+    <div>
+      <h2>Exercise:#1</h2>
+      <P id="my-test-id">Welcome to JavaScript</P>
+      <button>
+        THIS IS THE TIME TO <span>SHOW UP</span> 
+      </button>
+    </div>
+    
+    <div>
+      <h2>Exercise:#2</h2> 
+      <button onclick="btn('1')">nature</button>
+      <button onclick="btn('2')">hare</button>
+      <button onclick="btn('3')">lamb</button>
+
+      
+      <img id="image" src="media/natur.png"  width="300" height="200">
+    </div>
+    
+    <div>
+      <h2>exercise #4</h2>
+      <button onclick="btn('4')">show Alert</button>
+    </div>  
+
+    <div>
+      <h2>exercise #5</h2>
+      <p id="output" onclick="hello()">hello</p>
+      <id id="dispay"></id>
+    </div>
+
+    <div>
+      <h2>Activity6</h2>
+      <button onclick="document.getElementById('hello').innerHTML = Date()">The time is:</button>
+      <p id="hello"></p>
+    </div>
+
+    <div>
+      <h2>Exercise7</h2>
+      let text=" Kigali, Muhanga"
+        let part= text.slice(7,2);
+        document.getElementById()
+    </div>
+
+  </div>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+ <script src="index.js">
+   // Declare variables using var, let, and const
+   let x = 10;
+   let y = 5;
+   const z = 3;
+
+   // Calculate the difference of x and y
+   let a = x - y;
+
+   // Calculate the sum of y and z
+   let b = y + z;
+
+   // Display the values on the web page
+   document.getElementById("output").innerHTML = `
+     x = ${x} <br>
+     y = ${y} <br>
+     z = ${z} <br>
+     a (x - y) = ${a} <br>
+     b (y + z) = ${b}
+   `;
+
+   
+  
+  </script>
+</body>
+</html>

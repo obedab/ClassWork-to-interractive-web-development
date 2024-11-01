@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment2</title>
+</head>
+<body>
+ <h1>Individual Assignment #2 for ABIRAGIYE Obed     222003706    on Interactive web development</h1>
+
+<script>
+  
+  let numbers = [3, 7, 12, 5, 9, 15, 4, 8, 10, 2, 11, 20, 6, 14, 1, 17, 13, 19, 16, 18];yy
+
+  //Q1 Function to Find the Sum of All Numbers
+function findSum(arr) {
+    return arr.reduce((sum, num) => sum + num, 0);
+}
+
+console.log("Sum:", findSum(numbers));
+
+//Q2 Function to Find the Largest Number
+function findLargest(arr) {
+    return Math.max(...arr);
+}
+
+console.log("Largest Number:", findLargest(numbers));
+
+//Q3  Function to Sort an Array in Ascending Order
+function sortArray(arr) {
+    return arr.slice().sort((a, b) => a - b);
+}
+console.log("Sorted Array:", sortArray(numbers));
+//Q4  Function to Reverse an Array
+function reverseArray(arr) {
+    return arr.slice().reverse();
+}
+
+console.log("Reversed Array:", reverseArray(numbers));
+
+//Q5   Function to Return Only Even Numbers
+function filterEvenNumbers(arr) {
+    return arr.filter(num => num % 2 === 0);
+}
+
+console.log("Even Numbers:", filterEvenNumbers(numbers));
+
+
+//Q6 Function to Return Only Odd Numbers
+
+function filterOddNumbers(arr) {
+    return arr.filter(num => num % 2 !== 0);
+}
+
+console.log("Odd Numbers:", filterOddNumbers(numbers));
+
+//Q7 Function to Calculate the Average of Numbers 
+function CalcAverage(arr) {
+    return findSum(arr) / arr.length;
+}
+
+console.log("Average:", CalcAverage(numbers));
+
+
+//Q Funcrion to Remove DUplicates from an Array
+
+function removeDuplicates(arr) {
+    return [...new Set(arr)];
+}
+
+console.log("Array without Duplicates:", removeDuplicates(numbers));
+
+
+//Q9 Function to Find the Median Value
+
+function findMedian(arr) {
+    const sorted = sortArray(arr);
+    const mid = Math.floor(sorted.length / 2);
+    return sorted.length % 2 === 0 ? (sorted[mid - 1] + sorted[mid]) / 2 : sorted[mid];
+}
+
+console.log("Median:", findMedian(numbers));
+
+//Q10  Function to Multiply All Elements by 2
+
+function multiplyByTwo(arr) {
+    return arr.map(num => num * 2);
+}
+
+console.log("Multiplied by 2:", multiplyByTwo(numbers));
+
+//Arrays of Strings (Names)
+//Q11Function to Print Each Name on a New Line
+
+const names = ["Adam", "Titus", "Yves", "David", "Eva", "Lea", "Grace", "Hannah", "Ian", "Jack", "Kate", "Obed", "Noel", "Nina", "Emmy", "Paul", "Kelly", "Rose", "Steve", "Tina"];
+
+//Q11 Function to Print Each Name on a New Line
+
+function printNames(arr) {
+    arr.forEach(name => console.log(name));
+}
+
+printNames(names);
+
+//Q12. Function to Sort Names Alphabetically
+function sortNames(arr) {
+    return arr.slice().sort();
+}
+
+console.log("Sorted Names:", sortNames(names));
+
+
+//Q13. Function to Check if a Specific Name Exists
+function nameExists(arr, name) {
+    return arr.includes(name);
+}
+
+console.log("Name Exists:", nameExists(names, "Alice"));
+
+//Q14. Function to Find the Longest Name
+
+function findLongestName(arr) {
+    return arr.reduce((longest, current) => longest.length > current.length ? longest : current);
+}
+
+console.log("Longest Name:", findLongestName(names));
+
+//Q15 Function to Find Names Starting with a Specific Letter
+
+
+function namesStartingWith(arr, letter) {
+    return arr.filter(name => name.startsWith(letter));
+}
+
+console.log("Names Starting with 'A':", namesStartingWith(names, 'A'));
+
+//Q16  Function to Convert All Names to Uppercase
+
+function convertToUppercase(arr) {
+    return arr.map(name => name.toUpperCase());
+}
+
+console.log("Uppercase Names:", convertToUppercase(names));
+
+//Q17 Function to Remove a Specific Name
+
+function removeName(arr, name) {
+    return arr.filter(n => n !== name);
+}
+
+console.log("Names without 'Alice':", removeName(names, "Alice"));
+
+
+// Q18 Function to Count How Many Names Contain the Letter 'a'
+
+
+function countNamesWithA(arr) {
+    return arr.filter(name => name.toLowerCase().includes('a')).length;
+}
+
+console.log("Count of Names with 'a':", countNamesWithA(names));
+
+//Q19 Function to Concatenate All Names into a Single String
+
+function concatenateNames(arr) {
+    return arr.join(", ");
+}
+
+console.log("Concatenated Names:", concatenateNames(names));
+
+//Q20 Function to Reverse the Order of Names
+
+function reverseNames(arr) {
+    return arr.slice().reverse();
+}
+
+console.log("Reversed Names:", reverseNames(names));
+
+//Q21. Create a JavaScript Object that Represents a Person
+
+const person = {
+    name: "Ntwari prence",
+    age: 22,
+    color: black,
+    occupation: "Software Developer"
+};
+
+console.log(person);
+
+
+//Q22. Function to Return a Formatted String with Person's Information
+
+function formatPersonInfo(person) {
+    return `${person.name}, ${person.age} years old, is a ${person.occupation}.`;
+}
+
+console.log(formatPersonInfo(person));
+
+
+//Q23. Function to Add a New Property to an Existing Object
+function addProperty(obj, key, value) {
+    obj[key] = value;
+    return obj;
+}
+
+// Example usage:
+addProperty(person, "hobby", "Reading");
+console.log(person);
+
+
+
+//Q24. Function to Remove a Property from an Existing Object
+
+ function removeProperty(obj, key) {
+  delete obj[key];
+    return obj;
+}
+
+// Example usage:
+removeProperty(person, "hobby");
+console.log(person);
+
+//Q25. Function to List All Properties and Values of a JavaScript Object
+
+function listProperties(obj) {
+    for (let key in obj) {
+        console.log(`${key}: ${obj[key]}`);
+    }
+}
+
+listProperties(person);
+
+//Q26. Function to Merge Two Objects into One
+
+function mergeObjects(obj1, obj2) {
+  return { ...obj1, ...obj2 };
+}
+
+// Example usage:
+const additionalInfo = { hobby: "Gardening", city: "New York" };
+const mergedPerson = mergeObjects(person, additionalInfo);
+console.log(mergedPerson);
+
+//Q27. Function to Check if a Property Exists in an Object
+
+function propertyExists(obj, key) {
+    return obj.hasOwnProperty(key);
+}
+
+// Example usage:
+console.log(propertyExists(person, "age"));  // true
+console.log(propertyExists(person, "address"));  // false
+
+//Q28. Function to Clone an Object Without Referencing the Original One
+
+ function cloneObject(obj) {
+    return { ...obj };
+}
+
+// Example usage:
+const clonedPerson = cloneObject(person);
+console.log(clonedPerson);
+
+//Q29. Function to Loop Through an Array of Objects and Print a Specific Property
+
+
+const people = [
+    { name: "Eva", age: 23, color:black, occupation: "Engineer" },
+    { name: "Yves", age: 30, color:black, occupation: "Doctor" },
+    { name: "Steve", age: 28, color:white, occupation: "Artist" }
+];
+
+function printProperty(arr, prop) {
+    arr.forEach(item => {
+        console.log(item[prop]);
+    });
+}
+
+// Example usage:
+printProperty(people, "name");
+
+
+</script>
+</body>
+</html>
